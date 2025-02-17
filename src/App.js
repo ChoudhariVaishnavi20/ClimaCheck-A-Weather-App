@@ -5,7 +5,7 @@ export default function App() {
   const [weather, setWeather] = useState(null);
 
   const fetchWeather = async () => {
-    const apiKey = "67e858ea82903011365a6d02e5a6a8c9"; // Replace with your API key
+    const apiKey = process.env.REACT_APP_API_KEY;
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
     );
